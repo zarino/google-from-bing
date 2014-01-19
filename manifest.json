@@ -1,0 +1,23 @@
+{
+  "name": "Google from Bing",
+  "version": "1.0",
+  "manifest_version": 2,
+  "description": "For those times when Bing draws a blank: easily retry your search query with Google",
+  "homepage_url": "http://github.com/zarino/google-from-bing",
+  "icons": {
+    "128": "icon.png"
+  },
+  "permissions": [
+    "*://*.bing.com/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "*://*.bing.com/*"
+      ],
+      "js": [
+        "inject.js"
+      ]
+    }
+  ]
+}
